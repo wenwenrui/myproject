@@ -22,7 +22,9 @@
         </Col>
       </Row>
       <Row style="height: 150px;width:50%;">
-        <Alert v-if='showalter' closable show-icon :type='type' @on-close='hidealert'>{{erromessage}}</Alert>
+        <transition name="fade">
+          <Alert v-if='showalter' closable show-icon :type='type' @on-close='hidealert'>{{erromessage}}</Alert>
+        </transition>
       </Row>
      </Col>
    </row>
@@ -85,5 +87,10 @@ export default {
 .row{
   margin-bottom: 5%;
 }
-
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 </style>

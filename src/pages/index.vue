@@ -50,7 +50,8 @@ body{
     overflow: hidden;
 }
 .layout .header,.layout .content,.layout .footer{
-    height: 63em;
+    font-size: 10px;
+    height: 45em;
     width: 100%;
 }
 .layout .header{
