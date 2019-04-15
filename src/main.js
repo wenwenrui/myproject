@@ -5,10 +5,11 @@ import App from './App'
 import router from './router'
 import iView from 'iview'
 import store from './store'
+import VCharts from 'v-charts'
 
 // css
 import 'iview/dist/styles/iview.css'
-
+Vue.use(VCharts)
 Vue.use(iView)
 Vue.config.productionTip = false
 
