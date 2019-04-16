@@ -9,6 +9,7 @@ import VCharts from 'v-charts'
 
 // css
 import 'iview/dist/styles/iview.css'
+import './assets/css/main.css'
 Vue.use(VCharts)
 Vue.use(iView)
 Vue.config.productionTip = false

@@ -1,0 +1,26 @@
+body {
+    font-size:16px;
+    font-family: Roboto,San Francisco,"Helvetica Neue",Helvetica,Arial,PingFangSC-Light,"Hiragina Sans GB","WenQuanYi Micro Hei",'microsoft yahei ui','microsoft yahei',sans-serif;
+    letter-spacing:3px;
+    background-color: #fff;
+}
+#app{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom: 0;
+}
+
+.ivu-tabs-bar {
+    margin: 0;
+    border: 0;
+  }
+.ivu-tabs-nav-container{
+    line-height: 3;
+    font-size: 16px;
+    margin: 0;
+}
+.ivu-tabs-nav-wrap {
+    margin: 0;
+}

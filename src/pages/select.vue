@@ -6,6 +6,7 @@
 
 <script>
 import VDistpicker from 'v-distpicker'
+import {mapGetters} from 'vuex'
 export default {
   name: 'getAddress',
   components: {
@@ -15,9 +16,14 @@ export default {
     return {
     }
   },
+  computed: {
+    ...mapGetters('index', [
+      'isCollapsible'
+    ])
+  },
   methods: {
     onChangeProvince (a) {
-      console.log(a)
+      console.log(this.isCollapsible)
     },
     onChangeCity (a) {
       console.log(a)

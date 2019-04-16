@@ -1,7 +1,7 @@
 <template>
    <row align='middle' type='flex' class-name="contain">
      <Col span="12" offset='6' class-name="login" style="display:flex;align-items:center;justify-content:center;flex-direction:column">
-      <Row style="height: 150px;width:50%;">
+      <Row style="width:50%;">
         <Row type='flex' justify='center' class-name="row">
         <h1>登录</h1>
       </Row>
