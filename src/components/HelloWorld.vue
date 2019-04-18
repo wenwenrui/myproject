@@ -32,7 +32,6 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <script>
-import router from '../router'
 export default {
   name: 'HelloWorld',
   data () {
@@ -69,7 +68,7 @@ export default {
       }
       this.Showalter('success', '正确')
       setTimeout(() => {
-        router.push({path: '/index'})
+        this.$router.push({path: '/index'})
       }, 3000)
     }
   }

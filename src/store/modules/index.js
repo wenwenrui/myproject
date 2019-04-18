@@ -1,6 +1,6 @@
 const state = {
   Collapsible: false,
-  activeName: '/home'
+  activeName: ''
 }
 const getters = {
   isCollapsible (state) {
