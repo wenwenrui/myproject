@@ -2,14 +2,7 @@ const state = {
   Collapsible: false,
   activeName: ''
 }
-const getters = {
-  isCollapsible (state) {
-    return state.Collapsible
-  },
-  activeName (state) {
-    return state.activeName
-  }
-}
+
 const mutations = {
   change (state) {
     state.Collapsible = !state.Collapsible
@@ -18,6 +11,7 @@ const mutations = {
     state.activeName = name
   }
 }
+
 const actions = {
   changeCollapsible (context) {
     context.commit('change')
@@ -29,7 +23,6 @@ const actions = {
 export default {
   namespaced: true,
   state,
-  getters,
   mutations,
   actions
 }

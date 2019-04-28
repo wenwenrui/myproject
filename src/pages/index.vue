@@ -89,7 +89,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters('index', [
+    ...mapGetters([
       'isCollapsible',
       'activeName'
     ]),
@@ -107,7 +107,6 @@ export default {
     }
   },
   mounted () {
-    console.log(this.activeName)
   },
   methods: {
     ...mapActions('index', [

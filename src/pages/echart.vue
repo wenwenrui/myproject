@@ -34,6 +34,14 @@ export default {
         }
       }
     }
+  },
+  mounted () {
+    const pages = require.context('../pages', false, /\.vue$/)
+    console.log(pages.keys().map(item => ({
+      path: `/${item.replace(/^\.\/(.+)\.vue$/, '$1')}`,
+      name: item.replace(/^\.\/(.+)\.vue$/, '$1'),
+      component: pages(item).default
+    })))
   }
 }
 </script>

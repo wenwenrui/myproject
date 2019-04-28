@@ -8,7 +8,7 @@
 import VDistpicker from 'v-distpicker'
 import {mapGetters} from 'vuex'
 export default {
-  name: 'getAddress',
+  name: 'select',
   components: {
     VDistpicker
   },

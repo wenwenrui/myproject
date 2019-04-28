@@ -6,7 +6,7 @@ import select from '@/pages/select'
 import echart from '@/pages/echart'
 
 Vue.use(Router)
-
+console.log(echart)
 export default new Router({
   routes: [
     {
