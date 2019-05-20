@@ -32,6 +32,7 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <script>
+import {login} from '../api/api'
 export default {
   name: 'HelloWorld',
   data () {
@@ -56,7 +57,7 @@ export default {
       this.showalter = false
       console.log(this.showalter)
     },
-    login () {
+    async login () {
       // console.log(this.showalter)
       if (!this.username || this.username === '') {
         this.Showalter('error', '用户名不能为空')
@@ -66,10 +67,8 @@ export default {
         this.Showalter('error', '密码不能为空')
         return
       }
-      this.Showalter('success', '正确')
-      setTimeout(() => {
-        this.$router.push({path: '/index'})
-      }, 3000)
+      let res = await login({username: this.username, password: this.password})
+      console.log(res)
     }
   }
 }
