@@ -15,5 +15,5 @@ export default async (url, query = '', variables = {}) => {
   }
   let response = await axios(config)
   console.log(response)
-  return response
+  return response.data
 }

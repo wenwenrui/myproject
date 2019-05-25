@@ -33,6 +33,7 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <script>
 import {login} from '../api/api'
+import {setLocalStorge} from '../utils/base'
 export default {
   name: 'HelloWorld',
   data () {
@@ -55,7 +56,6 @@ export default {
     },
     hidealert () {
       this.showalter = false
-      console.log(this.showalter)
     },
     async login () {
       // console.log(this.showalter)
@@ -67,8 +67,19 @@ export default {
         this.Showalter('error', '密码不能为空')
         return
       }
-      let res = await login({username: this.username, password: this.password})
-      console.log(res)
+      try {
+        let res = await login({username: this.username, password: this.password})
+        console.log(res)
+        if (res.data.getUser === 'success') {
+          setLocalStorge({key: 'access-token', value: this.username})
+          this.$router.push('/index')
+        } else {
+          this.Showalter('error', '该用户不存在')
+        }
+      } catch (e) {
+        this.Showalter('error', e)
+        throw e
+      }
     }
   }
 }
